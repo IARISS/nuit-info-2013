@@ -4,7 +4,7 @@
         <div class="box">
           <div class="col-lg-12">
             <hr>
-            <h2 class="intro-text text-center">Rechercher un porduit avec la <strong>reconnaissance vocale</strong></h2>
+            <h2 class="intro-text text-center">Rechercher un produit avec la <strong>reconnaissance vocale</strong></h2>
             <hr>
             <form class="text-center col-md-4 col-md-offset-4" onSubmit="doSearch(document.getElementById('s').value);return false;">
 				<input type="text" id="s" class="form-control" x-webkit-speech onwebkitspeechchange="doSearch(this.value);" />
@@ -52,7 +52,7 @@ function doSearch(value) {
 	if(action=='google' ) {
 		varr[0]='';
 		found = true;
-		var mySearch = varr.join(' ');
+		var mySearch = varr.join(' ');()
 		var url = 'https://google.com/';
 		var confirmation = 'Aller sur Google ?';
 	}
