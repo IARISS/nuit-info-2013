@@ -29,30 +29,30 @@ $html='<div class="container">
 		$features=$product->features;
 
 		$html.='<div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="well well-sm">
-                <div class="col-sm-6 col-md-4">
-                <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>
-                           '.$name.'</h4>
-                        <small>'.$category.'<i class="glyphicon glyphicon-map-marker">
-                        </i></small>
-                        <p>
-                            <i class="glyphicon glyphicon-envelope"></i>'.$price.' '.$currency.'
-                            <br />
-                            <i class="glyphicon glyphicon-globe"></i><a href="'.$url.'">Lien</a>
-                            <br />
-                            <i class="glyphicon glyphicon-gift"></i>Marque : '.$brand.'/p>
-                            <ul>';
+                	<div class="well well-sm">
+	                	<div class="col-sm-6 col-md-4">
+	                		<img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+	                    </div>
+	                    <div class="col-sm-6 col-md-8">
+	                        <h4>
+	                           '.$name.'</h4>
+	                        <small>'.$category.'<i class="glyphicon glyphicon-map-marker">
+	                        </i></small>
+	                        <p>
+	                            <i class="glyphicon glyphicon-envelope"></i>'.$price.' '.$currency.'
+	                            <br />
+	                            <i class="glyphicon glyphicon-globe"></i><a href="'.$url.'">Lien</a>
+	                            <br />
+	                            <i class="glyphicon glyphicon-gift"></i>Marque : '.$brand.'</p>
+	                            <ul>';
 		foreach($features as $key => $feature)
 		{
 			$html.= '<li>'.$key.' : '.$feature.'</li>';
 		}
-		$html .= '</ul></div>';
+		$html .= '</ul></div></div></div>';
 	}
 //}
-$html .= '</div></div></div></div>';
+$html .= '</div></div>';
 
 echo $html;
 ?>
