@@ -6,8 +6,7 @@ require('lib/semantics3/Semantics3.php');
 $requestor = new Semantics3_Products(SEM3_KEY,SEM3_SECRET);
 
 $html='<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-6 col-md-6">';
+		<div class="row">';
 
 //if(isset($_POST['search']))
 //{
