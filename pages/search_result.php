@@ -5,9 +5,9 @@ require('lib/semantics3/Semantics3.php');
  
 $requestor = new Semantics3_Products(SEM3_KEY,SEM3_SECRET);
 
-if(isset($_POST['search']))
-{
-	$search=$_POST['search'];
+//if(isset($_POST['search']))
+//{
+	$search="pantalon rouge";//$_POST['search'];
 	$requestor->products_field("search", $search);
 	$results = $requestor->get_products();
 	$dr = json_decode($results);
@@ -19,6 +19,6 @@ if(isset($_POST['search']))
 		echo $name;
 		echo '\n';
 	}
-}
+//}
 
 ?>
