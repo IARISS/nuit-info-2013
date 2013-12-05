@@ -49,7 +49,7 @@ $html='<div class="container">
 		{
 			$html.= '<li>'.$key.' : '.$feature.'</li>';
 		}
-		$html .= '</ul></div></div></div>';
+		$html .= '</ul></div></div></div><div class="clearfix"></div>';
 	}
 //}
 $html .= '</div></div>';
