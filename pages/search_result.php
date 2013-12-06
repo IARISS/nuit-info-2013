@@ -23,7 +23,6 @@ $html='<div class="container">';
 	curl_close($ch);
 	 
 	preg_match("#http:[^:]+\.jpg#",$ret,$res);//on match une url d'image
-	echo $res;
 
 	$search=$_POST['search'];
 	$requestor->products_field("search", $search);
@@ -74,7 +73,7 @@ $html='<div class="container">';
             <div class="well">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                        <img src="'.$res[0].'" alt="" class="img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>'.$name.'</h4>
