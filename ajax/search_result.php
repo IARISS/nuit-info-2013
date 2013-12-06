@@ -4,6 +4,9 @@ require('../include/define.php');
 require('../lib/semantics3/Semantics3.php');
  
 $requestor = new Semantics3_Products(SEM3_KEY,SEM3_SECRET);
+$count = null;
+$_POST['search'] = 'toyota';
+$_POST['cat_id'] = 934;
 
 $html='<div class="container">';
 
@@ -22,7 +25,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	// Fermeture de la ressource cURL et libération des ressources systèmes
 	curl_close($ch);
 	 
-	if( preg_match("`http:[^:]+\.jpg`sUi",$ret,$res) )//on match une url d'image
+	if( preg_match("`h(http(s?):)|([/|.|\w|\s])*\.(?:jpg|gif|png)`sUi",$ret,$res) )//on match une url d'image
 	{
 		if(empty($res)) $res = 'vide ' . print_r($res, true);
 	}
