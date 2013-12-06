@@ -1,7 +1,7 @@
 <?php
 //Template maitre, les pages supplémentaires sont à mettre dans le dossier pages
 if (empty($_GET['page'])) {
-    header('Location: /home');
+    header('Location: /searchPage');
     exit();
 }
 
