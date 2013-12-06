@@ -72,11 +72,9 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	$ret=curl_exec($ch);
 	// Fermeture de la ressource cURL et libération des ressources systèmes
 	curl_close($ch);
-	 
-	preg_match_all('`http://.{0,50}(?:png|jpe?g)`sUi', $ret, $res);
-	if(empty($res)) {
-		$res = array(array());
-		$res[0][0] ='http://www.vidal.fr/includes/para_gp/images/no_image.gif';
+	$img = 'http://www.vidal.fr/includes/para_gp/images/no_image.gif';
+	if(preg_match_all('`http://.{0,50}(?:png|jpe?g)`sUi', $ret, $res)){
+		$img = $res[0][0];
 	}
 
 		$html.='<div class="row">
@@ -84,7 +82,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
             <div class="well">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="'.($res[0][0] ?: 'http://www.vidal.fr/includes/para_gp/images/no_image.gif').'" alt="" class="img-rounded img-responsive" />
+                        <img src="'.$img.'" alt="" class="img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>'.$name.'</h4>
