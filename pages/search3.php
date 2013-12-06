@@ -33,6 +33,47 @@
 
 
 <script type="text/javascript">
+
+
+      google.load('search', '1');
+
+      var imageSearch;
+      function searchComplete(data) {
+
+        // Check that we got results
+        if (imageSearch.results && imageSearch.results.length > 0) {
+
+          OnLoad(data);
+          var results = imageSearch.results;
+          
+            var result = results[0];
+            var newImg = data.getElementById('img');
+
+            newImg.src = result.url;
+            newImg.alt = result.titleNoFormatting;
+            newImg.title = newImg.alt;
+            imgContainer.appendChild(newImg);
+           contentDiv.appendChild(imgContainer);
+          
+        }
+      }
+
+      function OnLoad(data) {
+      
+      	searchComplete(data);
+      
+        imageSearch = new google.search.ImageSearch();
+
+        imageSearch.setSearchCompleteCallback(this, searchComplete, null);
+
+        
+        <?php
+        echo 'imageSearch.execute("'.$name.'");';
+        ?>
+        google.search.Search.getBranding('branding');
+      }
+     //google.setOnLoadCallback(OnLoad);
+
 	$('#actionSearch').click(function(e){
 		e.preventDefault();
 		var search = $('#search').val();
@@ -43,6 +84,7 @@
 			$('.result').html('Chargement...');
 			$.post('ajax/search_result2.php',{search:search,cat_id:id},function(data){
 				$('.result').html(data);
+				OnLoad(data);
 			});
 		},'json')
 	})
