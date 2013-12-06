@@ -25,7 +25,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	// Fermeture de la ressource cURL et libération des ressources systèmes
 	curl_close($ch);
 	 
-	if( preg_match_all('`http://.{0,50}(?:png|jpe?g)`sUi', $ret, $res) ) {
+	preg_match_all('`http://.{0,50}(?:png|jpe?g)`sUi', $ret, $res);
 	//
 
 	$search=$_POST['search'];
