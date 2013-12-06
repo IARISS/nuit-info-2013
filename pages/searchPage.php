@@ -8,7 +8,8 @@
             <form class="text-center col-md-4 col-md-offset-4">
 				<input class="form-control" type="text">
 				<button class="btn3d btn btn-primary btn-lg btn-block" id="actionSearch">Rechercher</button>
-			</form>			
+			</form>	
+			<div class="result"></div>		
 			<div class="clearfix"></div>
           </div>
         </div>
