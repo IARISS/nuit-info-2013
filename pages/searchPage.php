@@ -19,6 +19,7 @@
 
 <script type="text/javascript">
 	$('#actionSearch').click(function(e){
+		e.preventDefault();
 		var search = $('search').value();
 		$.post('ajax/search_result.php',{search : search}, function(data){
 			alert(data);
