@@ -9,6 +9,22 @@ $html='<div class="container">';
 
 if(isset($_POST['search']) && isset($_POST['cat_id']))
 {
+
+	$ch = curl_init();
+ 
+	// Définition de l'URL et autres options appropriées
+	curl_setopt($ch, CURLOPT_URL, "http://www.google.fr/images?hl=fr&q=shakira");
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
+	 
+	// Récupération de l'URL et passage au navigateur
+	$ret=curl_exec($ch);
+	// Fermeture de la ressource cURL et libération des ressources systèmes
+	curl_close($ch);
+	 
+	preg_match("#http:[^:]+\.jpg#",$ret,$res);//on match une url d'image
+	if(empty($ret)) $ret = 'vide';
+
 	$search=$_POST['search'];
 	$cat_id=$_POST['cat_id'];
 	$requestor->products_field("name", $search);
@@ -61,7 +77,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
             <div class="well">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                        <img src="'.$ret.'" alt="" class="img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>'.$name.'</h4>
@@ -90,5 +106,6 @@ $html.='           		</ul>
 }
 $html .= '</div>';
 
+if($count==0) $html='Aucun résultat n\'a été trouvé';
 echo $html;
 ?>
