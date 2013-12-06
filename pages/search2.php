@@ -26,9 +26,9 @@
 		$.post('ajax/get_cat_id.php',{category:category}, function(data){
 			var id = data.cat_id;
 			alert(id);
-			$post('ajax/search_result.php',{search:search,cat_id:id},function(data){
+			$.post('ajax/search_result.php',{search:search,cat_id:id},function(data){
 				$('.result').html(data);
-			})
-		})
+			});
+		},'json')
 	})
 </script>
