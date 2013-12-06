@@ -65,11 +65,12 @@
         imageSearch = new google.search.ImageSearch();
 
         imageSearch.setSearchCompleteCallback(this, searchComplete, null);
+        var nom = data.getElementById('h4').innerHTML();
+     
 
+
+        imageSearch.execute(nom);
         
-        <?php
-        echo 'imageSearch.execute("'.$name.'");';
-        ?>
         google.search.Search.getBranding('branding');
       }
      //google.setOnLoadCallback(OnLoad);
