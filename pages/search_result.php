@@ -20,7 +20,7 @@ $html='<div class="container">';
 	{
 		$name=$product->name;
 		$category=$product->category;
-		if($price=$product->sitedetails!=null)
+		if($product->sitedetails!=null)
 		{
 			if($product->sitedetails[0]->latestoffers!=null)
 			{
