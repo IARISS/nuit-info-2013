@@ -68,7 +68,7 @@ $html='<div class="container">';
                             <br />
                             Marque : '.$brand.'
                             <br />
-							<a href="'.$url.'">Lien</a>
+							<a href="'.$url.'"><small>'.$url.'</small></a>
 							<br />
 							Propriétés : <ul>';
 
