@@ -20,9 +20,9 @@ $html='<div class="container">';
 	{
 		$name=$product->name;
 		$category=$product->category;
-		if($price=$product->sitedetails[0]!=null)
+		if($price=$product->sitedetails!=null)
 		{
-			if($product->sitedetails[0]->latestoffers[0]!=null)
+			if($product->sitedetails[0]->latestoffers!=null)
 			{
 				$price=$product->sitedetails[0]->latestoffers[0]->price;
 				$currency=$product->sitedetails[0]->latestoffers[0]->currency;
@@ -31,7 +31,7 @@ $html='<div class="container">';
 			$url=$product->sitedetails[0]->url;
 		}
 		else $price='n/a';$currency='';$url='#';
-		
+
 		$brand=$product->brand;
 		$color=$product->color;
 		
