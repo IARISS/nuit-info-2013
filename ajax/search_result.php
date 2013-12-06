@@ -23,7 +23,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	curl_close($ch);
 	 
 	preg_match("#http:[^:]+\.jpg#",$ret,$res);//on match une url d'image
-
+	if(isEmpty($res)) $res = 'vide';
 	$search=$_POST['search'];
 	$cat_id=$_POST['cat_id'];
 	$requestor->products_field("name", $search);
@@ -76,7 +76,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
             <div class="well">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="'.$res.'" alt="" class="img-rounded img-responsive" />
+                        <img src="'.$res[0].'" alt="" class="img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>'.$name.'</h4>
