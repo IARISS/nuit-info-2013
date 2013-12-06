@@ -5,8 +5,8 @@ require('../lib/semantics3/Semantics3.php');
  
 $requestor = new Semantics3_Products(SEM3_KEY,SEM3_SECRET);
 $count = null;
-$_POST['search'] = 'toyota';
-$_POST['cat_id'] = 934;
+//$_POST['search'] = 'toyota';
+//$_POST['cat_id'] = 934;
 
 $html='<div class="container">';
 
@@ -25,9 +25,9 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	// Fermeture de la ressource cURL et libération des ressources systèmes
 	curl_close($ch);
 	 
-	if( preg_match("`h(http(s?):)|([/|.|\w|\s])*\.(?:jpg|gif|png)`sUi",$ret,$res) )//on match une url d'image
+	if( preg_match("`https?://(?:[a-z\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpg|gif|png)`sUi",$ret,$res) )//on match une url d'image
 	{
-		if(empty($res)) $res = 'vide ' . print_r($res, true);
+		if(empty($res)) $res = 'vide ';// . print_r($res, true);
 	}
 	//
 
@@ -83,7 +83,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
             <div class="well">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="'.var_dump($res).'" alt="" class="img-rounded img-responsive" />
+                        <img src="'.'#'.'" alt="" class="img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>'.$name.'</h4>
