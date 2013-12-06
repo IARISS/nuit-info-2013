@@ -74,6 +74,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	curl_close($ch);
 	 
 	preg_match_all('`http://.{0,50}(?:png|jpe?g)`sUi', $ret, $res);
+	if(empty($res)) $res ='http://www.vidal.fr/includes/para_gp/images/no_image.gif';
 
 		$html.='<div class="row">
         <div class="col-md-10 col-md-offset-1">
