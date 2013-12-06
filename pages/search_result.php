@@ -62,15 +62,15 @@ $html='<div class="container">';
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>'.$name.'</h4>
-                        <small><cite title="San Francisco, USA">'.$category.'<i class="glyphicon glyphicon-map-marker">
-                        </i></cite></small>
+                        <small>Catégorie : '.$category.'</small>
                         <p>
-                            <i class="glyphicon glyphicon-envelope"></i>'.$price.' '.$currency.'
+                            Prix : '.$price.' '.$currency.'
                             <br />
-                            <i class="glyphicon glyphicon-globe"></i><a href="'.$url.'">www.jquery2dotnet.com</a>
+                            Lien : <a href="'.$url.'">'.$url.'</a>
                             <br />
-							<i class="glyphicon glyphicon-globe"></i>'.$brand.'
-							<div>';
+							Marque : '.$brand.'
+							<div>
+							Propriétés : ';
 
 							foreach($features as $key => $feature){
 								$html.='<li>'.$key.' : '.$feature.'</li>';
