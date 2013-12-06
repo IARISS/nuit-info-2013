@@ -60,11 +60,11 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 			$features=$product->features;
 		else $features = array('aucune propriété' => '...' );
 
-
+		$_name = $brand;
 		$ch = curl_init();
  
 	// Définition de l'URL et autres options appropriées
-	curl_setopt($ch, CURLOPT_URL, "http://www.bing.com/images/search?q=".$name);
+	curl_setopt($ch, CURLOPT_URL, "http://www.bing.com/images/search?q=".$_name);
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	 
