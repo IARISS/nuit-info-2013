@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="IARISS Team">
 
-    <title>IARISS Team</title>
+    <title>IARISS SHOP</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -18,9 +18,7 @@
 
   <body>
   
-    <div class="brand">IARISS TEAM</div>
-    <div class="address-bar">Site d'achat pour vous et par vous !</div>
-
+    <div class="brand">IARISS SHOP</div>
     <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -36,7 +34,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Nothing</a></li>
+            <li><a href="index.html">Site d'achat pour vous et par vous !</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->

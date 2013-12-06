@@ -1,15 +1,12 @@
 body {
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(bg.png);
+  background-repeat : repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 400;
+  font-height: 200px;
 }
 
 p {
@@ -22,7 +19,9 @@ hr {
   border-color: #999999;
   max-width: 400px;
 }
-
+#content{
+  height: 100%;
+}
 .brand,
 .address-bar {
   display: none;
