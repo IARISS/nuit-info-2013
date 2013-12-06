@@ -41,8 +41,10 @@ $html='<div class="container">';
 			$url='#';
 		} 
 
-		$brand=$product->brand;
-		$color=$product->color;
+		if(isset($product->brand))
+			$brand=$product->brand;
+		if(isset($product->color))
+			$color=$product->color;
 		
 		$features=$product->features;
 
