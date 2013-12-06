@@ -70,12 +70,13 @@ $html='<div class="container">';
                             <br />
 							Marque : '.$brand.'
 							<div>
-							Propriétés : ';
+							Propriétés : <ul>';
 
 							foreach($features as $key => $feature){
 								$html.='<li>'.$key.' : '.$feature.'</li>';
 							}
-$html.='           </div>
+$html.='           		</ul>
+					</div>
                 </div>
             </div>
         </div>
