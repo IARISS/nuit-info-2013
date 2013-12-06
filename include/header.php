@@ -13,6 +13,7 @@
 
     <!-- Add custom CSS here -->
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
   </head>
 
   <body>
