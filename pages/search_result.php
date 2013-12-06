@@ -22,7 +22,7 @@ $html='<div class="container">';
 		$category=$product->category;
 		if(isset($product->sitedetails))
 		{
-			if(isset($product->sitedetails[0]->latestoffers)
+			if(isset($product->sitedetails[0]->latestoffers))
 			{
 				$price=$product->sitedetails[0]->latestoffers[0]->price;
 				$currency=$product->sitedetails[0]->latestoffers[0]->currency;
