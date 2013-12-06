@@ -1,4 +1,4 @@
-
+<img src="" id="img" />
     <script src="https://www.google.com/jsapi"></script>
     <script >
 
@@ -43,6 +43,6 @@
     </script>
 
 
-    <div id="content">Loading...</div>
+   
 
   

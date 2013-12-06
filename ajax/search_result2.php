@@ -56,7 +56,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 			$features=$product->features;
 		else $features = array('aucune propriété' => '...' );
 		
-		include '../pages/googlimagesearch.php';
+		
 
 		$html.='<div class="row">
         <div class="col-md-10 col-md-offset-1">
