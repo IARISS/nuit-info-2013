@@ -21,7 +21,7 @@
 	$('#actionSearch').click(function(e){
 		e.preventDefault();
 		var search = $('#search').val();
-		$.post('ajax/get_page_id.php',{category:search}, function(data){
+		$.post('ajax/get_cat_id.php',{category:search}, function(data){
 			alert(data);
 			$('.result').html(data);
 		})
