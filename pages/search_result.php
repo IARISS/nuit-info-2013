@@ -66,9 +66,9 @@ $html='<div class="container">';
                         <p>
                             Prix : '.$price.' '.$currency.'
                             <br />
-                            Lien : <a href="'.$url.'">'.$url.'</a>
+                            Marque : '.$brand.'
                             <br />
-							Marque : '.$brand.'
+							<a href="'.$url.'">Lien</a>
 							<br />
 							Propriétés : <ul>';
 
