@@ -6,6 +6,9 @@
             <h2 class="intro-text text-center">Rechercher un produit</h2>
             <hr>
             <div class="col-md-4 col-md-offset-4">
+            	<div class="elt text-center">
+            		Vos caractéristiques :
+            	</div>
 				<div class="radio H">
 				  <label>
 				    <input type="radio" name="optionsRadios" id="optionsRadios1" value="H" checked>
@@ -150,6 +153,7 @@
 
 		$('.selector').html('D\'après vos réponses, nous avons déterminé que la catégorie qui vous correspond le mieux est : <strong>'+categorie+'</strong><br><br>Votre recherche :');
 		$('#formm,#redo,#manuel').show();
+		$('.elt').hide();
 
 		$('#actionSearch').click(function(e){
 			e.preventDefault();
