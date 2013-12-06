@@ -21,6 +21,7 @@
 	$('#actionSearch').click(function(e){
 		var search = $('search').value();
 		$.post('ajax/search_result.php',{search : search}, function(data){
+			alert(data);
 			$('.result').html(data);
 		})
 	})
