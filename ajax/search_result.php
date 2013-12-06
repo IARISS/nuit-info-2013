@@ -23,7 +23,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	curl_close($ch);
 	 
 	preg_match("#http:[^:]+\.jpg#",$ret,$res);//on match une url d'image
-	if(isEmpty($res)) $res = 'vide';
+	if(empty($res)) $res = 'vide';
 	$search=$_POST['search'];
 	$cat_id=$_POST['cat_id'];
 	$requestor->products_field("name", $search);
