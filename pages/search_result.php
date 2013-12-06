@@ -54,7 +54,7 @@ $html='<div class="container">';
 			$features=$product->features;
 
 		$html.='<div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3">
             <div class="well well-sm">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
