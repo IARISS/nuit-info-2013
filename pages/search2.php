@@ -5,7 +5,9 @@
             <hr>
             <h2 class="intro-text text-center">Rechercher un produit</h2>
             <hr>
+
             <form class="text-center col-md-4 col-md-offset-4">
+            	<label>Catégorie :</label>
 				<select name="category" id="category" class="selectpicker">
 					<option value="car" >Voitures</option>
 					<option value="action" >Action/sports</option>
@@ -18,6 +20,7 @@
 					<option value="Health Care" >Détente/Bien être</option>
 					<option value="Electronics" >Electronique/informatique</option>
 				</select>
+				<label>Recherche :</label>
 				<input id="search" class="form-control" type="text"/>
 				<button class="btn3d btn btn-primary btn-lg btn-block" id="actionSearch">Rechercher</button>
 			</form>	
