@@ -43,10 +43,15 @@ $html='<div class="container">';
 
 		if(isset($product->brand))
 			$brand=$product->brand;
+		else
+			$brand='n/a';
 		if(isset($product->color))
 			$color=$product->color;
+		else
+			$color='n/a';
 		
-		$features=$product->features;
+		if(isset($product->features))
+			$features=$product->features;
 
 		$html.='<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-6">
