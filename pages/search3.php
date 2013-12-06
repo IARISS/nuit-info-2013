@@ -43,7 +43,7 @@
         // Check that we got results
         if (imageSearch.results && imageSearch.results.length > 0) {
 
-          OnLoad(data);
+          
           var results = imageSearch.results;
           
             var result = results[0];
@@ -60,7 +60,7 @@
 
       function OnLoad(data) {
       
-      	searchComplete(data);
+      	
       
         imageSearch = new google.search.ImageSearch();
 
@@ -73,7 +73,7 @@
         
         google.search.Search.getBranding('branding');
       }
-     //google.setOnLoadCallback(OnLoad);
+     google.setOnLoadCallback(OnLoad);
 
 	$('#actionSearch').click(function(e){
 		e.preventDefault();
