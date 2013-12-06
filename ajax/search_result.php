@@ -90,5 +90,6 @@ $html.='           		</ul>
 }
 $html .= '</div>';
 
+if($count==0) $html='Aucun résultat n\'a été trouvé';
 echo $html;
 ?>
