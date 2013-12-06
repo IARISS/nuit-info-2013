@@ -15,7 +15,7 @@ if(isset($_POST['category']))
 	$tableau=$dr->{'results'};
 
 	$id=$tableau[0]->cat_id;
-	return json_encode({"cat_id",$id});
+	echo json_encode({"cat_id",$id});
 }
 
 ?>
