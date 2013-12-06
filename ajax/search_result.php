@@ -14,8 +14,8 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
  
 	// Définition de l'URL et autres options appropriées
 	curl_setopt($ch, CURLOPT_URL, "http://www.google.fr/images?hl=fr&q=shakira");
-	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
+	curl_setopt($ch, CURLOPT_HEADER, 1);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	 
 	// Récupération de l'URL et passage au navigateur
 	$ret=curl_exec($ch);
