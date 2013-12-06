@@ -27,7 +27,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	 
 	if( preg_match("`https?://(?:[a-z\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpg|gif|png)`sUi",$ret,$res) )//on match une url d'image
 	{
-		if(empty($res)) $res = 'vide ' . print_r($res, true);
+		if(empty($res)) $res = 'vide ';// . print_r($res, true);
 	}
 	//
 
