@@ -54,32 +54,33 @@ $html='<div class="container">';
 			$features=$product->features;
 
 		$html.='<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-6">
-                		<div class="well well-sm">
-		                	<div class="col-sm-6 col-md-4">
-		                		<img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
-		                    </div>
-		                    <div class="col-sm-6 col-md-8">
-		                        <h4>'.$name.'</h4>
-		                        <small>'.$category.'<i class="glyphicon glyphicon-map-marker"></i></small>
-		                        <p>
-		                            <i class="glyphicon glyphicon-envelope"></i>'.$price.' '.$currency.'
-		                            <br />
-		                            <i class="glyphicon glyphicon-globe"></i><a href="'.$url.'">Lien</a>
-		                            <br />
-		                            <i class="glyphicon glyphicon-gift"></i>Marque : '.$brand.'
-		                        </p>
-		                        <ul>';
-		foreach($features as $key => $feature)
-		{
-			$html.= '<li>'.$key.' : '.$feature.'</li>';
-		}
-		$html .= '</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-    <div class="clearfix"></div>';
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4>'.$name.'</h4>
+                        <small><cite title="San Francisco, USA">'.$category.'<i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i>'.$price.' '.$currency.'
+                            <br />
+                            <i class="glyphicon glyphicon-globe"></i><a href="'.$url.'">www.jquery2dotnet.com</a>
+                            <br />
+							<i class="glyphicon glyphicon-globe"></i>'.$brand.'
+							<div>';
+
+							foreach($features as $key => $feature){
+								$html.='<li>'.$key.' : '.$feature.'</li>';
+							}
+$html.='           </div>
+                </div>
+            </div>
+        </div>
+    </div>';
+		
 	}
 //}
 $html .= '</div>';
