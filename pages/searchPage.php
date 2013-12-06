@@ -22,7 +22,7 @@
 		e.preventDefault();
 		var search = $('#search').val();
 		$.post('ajax/search_result.php',{search:search}, function(data){
-			alert(data);
+			//alert(data);
 			$('.result').html(data);
 		})
 	})
