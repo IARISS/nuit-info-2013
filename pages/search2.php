@@ -24,7 +24,8 @@
 		var search = $('#search').val();
 		var category = $('#category').val();
 		$.post('ajax/get_cat_id.php',{category:category}, function(data){
-			var id = data.id;
+			var id = data.cat_id;
+			alert(id);
 			$post('ajax/search_result.php',{search:search,cat_id:id},function(data){
 				$('.result').html(data);
 			})
