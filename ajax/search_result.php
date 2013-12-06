@@ -11,6 +11,7 @@ if(isset($_POST['search']))
 {
 	$search=$_POST['search'];
 	$requestor->products_field("search", $search);
+	$requestor->categories_field("name", "computer");
 	$results = $requestor->get_products();
 	$dr = json_decode($results);
 	//var_dump($dr);
