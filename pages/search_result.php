@@ -69,7 +69,7 @@ $html='<div class="container">';
                             Lien : <a href="'.$url.'">'.$url.'</a>
                             <br />
 							Marque : '.$brand.'
-							<div>
+						</p>
 							Propriétés : <ul>';
 
 							foreach($features as $key => $feature){
