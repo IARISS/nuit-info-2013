@@ -20,9 +20,9 @@ $html='<div class="container">';
 	{
 		$name=$product->name;
 		$category=$product->category;
-		if($product->sitedetails!=null)
+		if(isset($product->sitedetails)
 		{
-			if($product->sitedetails[0]->latestoffers!=null)
+			if(isset($product->sitedetails[0]->latestoffers)
 			{
 				$price=$product->sitedetails[0]->latestoffers[0]->price;
 				$currency=$product->sitedetails[0]->latestoffers[0]->currency;
