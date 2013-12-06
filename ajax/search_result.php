@@ -75,7 +75,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	 
 	preg_match_all('`http://.{0,50}(?:png|jpe?g)`sUi', $ret, $res);
 	if(empty($res)) {
-		$res = array();
+		$res = array(array());
 		$res[0][0] ='http://www.vidal.fr/includes/para_gp/images/no_image.gif';
 	}
 
