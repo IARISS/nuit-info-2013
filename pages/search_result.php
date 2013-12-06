@@ -9,7 +9,7 @@ $html='<div class="container">';
 
 //if(isset($_POST['search']))
 //{
-	$search="pantalon rouge";//$_POST['search'];
+	$search=$_POST['search'];
 	$requestor->products_field("search", $search);
 	$results = $requestor->get_products();
 	$dr = json_decode($results);
