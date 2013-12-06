@@ -10,7 +10,7 @@ $html='<div class="container">';
 //if(isset($_POST['search']))
 //{
 	$search=$_POST['search'];
-	$requestor->products_field("category", $search);
+	$requestor->products_field("name", $search);
 	$results = $requestor->get_products();
 	$dr = json_decode($results);
 	//var_dump($dr);
