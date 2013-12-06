@@ -27,10 +27,19 @@ $html='<div class="container">';
 				$price=$product->sitedetails[0]->latestoffers[0]->price;
 				$currency=$product->sitedetails[0]->latestoffers[0]->currency;
 			}
-			else $price='n/a';$currency='';
+			else
+			{
+				$price='n/a';
+				$currency='';
+			}
 			$url=$product->sitedetails[0]->url;
 		}
-		else $price='n/a';$currency='';$url='#';
+		else
+		{
+			$price='n/a';
+			$currency='';
+			$url='#';
+		} 
 
 		$brand=$product->brand;
 		$color=$product->color;
