@@ -20,7 +20,7 @@ $html='<div class="container">';
 	{
 		$name=$product->name;
 		$category=$product->category;
-		if(isset($product->sitedetails)
+		if(isset($product->sitedetails))
 		{
 			if(isset($product->sitedetails[0]->latestoffers)
 			{
