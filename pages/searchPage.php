@@ -80,15 +80,7 @@
 
 
 <script type="text/javascript">
-	$('#actionSearch').click(function(e){
-		e.preventDefault();
-		var search = $('#search').val();
-		$.post('ajax/search_result.php',{search:search}, function(data){
-			$('.result').html(data);
-		})
-	});
-
-
+	
 	$('.S,.N,.A1,.A2,.A3,.A4,#valid2,#valid3,#formm,#redo,#manuel').hide();
 
 	var tab = [];
@@ -158,6 +150,19 @@
 
 		$('.selector').html('D\'après vos réponses, nous avons déterminé que la catégorie qui vous correspond le mieux est : <strong>'+categorie+'</strong><br><br>Votre recherche :');
 		$('#formm,#redo,#manuel').show();
+
+		$('#actionSearch').click(function(e){
+			e.preventDefault();
+			var search = $('#search').val();
+			$.post('ajax/get_cat_id.php',{category:category}, function(data){
+				var id = data.cat_id;
+				//alert(id);
+				$('.result').html('Chargement...');
+				$.post('ajax/search_result.php',{search:search,cat_id:id},function(data){
+					$('.result').html(data);
+				});
+			},'json')
+		});
 	});
 
 
