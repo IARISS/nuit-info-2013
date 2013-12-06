@@ -41,7 +41,7 @@
 			var id = data.cat_id;
 			//alert(id);
 			$('.result').html('Chargement...');
-			$.post('ajax/search_result.php',{search:search,cat_id:id},function(data){
+			$.post('ajax/search_result2.php',{search:search,cat_id:id},function(data){
 				$('.result').html(data);
 			});
 		},'json')
