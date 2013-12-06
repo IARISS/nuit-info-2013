@@ -5,8 +5,7 @@ require('lib/semantics3/Semantics3.php');
  
 $requestor = new Semantics3_Products(SEM3_KEY,SEM3_SECRET);
 
-$html='<div class="container">
-		<div class="row">';
+$html='<div class="container">';
 
 //if(isset($_POST['search']))
 //{
@@ -28,7 +27,8 @@ $html='<div class="container">
 		$url=$product->sitedetails[0]->url;
 		$features=$product->features;
 
-		$html.='<div class="col-xs-12 col-sm-6 col-md-6">
+		$html.='<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
                 	<div class="well well-sm">
 	                	<div class="col-sm-6 col-md-4">
 	                		<img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
@@ -49,10 +49,10 @@ $html='<div class="container">
 		{
 			$html.= '<li>'.$key.' : '.$feature.'</li>';
 		}
-		$html .= '</ul></div></div></div><div class="clearfix"></div>';
+		$html .= '</ul></div></div></div></div>';
 	}
 //}
-$html .= '</div></div>';
+$html .= '</div>';
 
 echo $html;
 ?>
