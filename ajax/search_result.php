@@ -7,10 +7,12 @@ $requestor = new Semantics3_Products(SEM3_KEY,SEM3_SECRET);
 
 $html='<div class="container">';
 
-//if(isset($_POST['search']))
-//{
+if(isset($_POST['search']) && isset($_POST['cat_id']))
+{
 	$search=$_POST['search'];
-	$requestor->products_field("search", $search);
+	$cat_id=$_POST['cat_id'];
+	$requestor->products_field("name", $search);
+	$requestor->products_field("cat_id", $cat_id);
 	$results = $requestor->get_products();
 	$dr = json_decode($results);
 	//var_dump($dr);
@@ -52,6 +54,7 @@ $html='<div class="container">';
 		
 		if(isset($product->features))
 			$features=$product->features;
+		else $features = array('aucune propriété' => '...' );
 
 		$html.='<div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -84,7 +87,7 @@ $html.='           		</ul>
     </div>';
 		
 	}
-//}
+}
 $html .= '</div>';
 
 echo $html;
