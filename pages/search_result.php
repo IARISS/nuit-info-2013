@@ -62,20 +62,21 @@ $html='<div class="container">';
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>'.$name.'</h4>
-                        <small>Catégorie : '.$category.'</small>
+                        Catégorie : '.$category.'
                         <p>
                             Prix : '.$price.' '.$currency.'
                             <br />
                             Lien : <a href="'.$url.'">'.$url.'</a>
                             <br />
 							Marque : '.$brand.'
-						</p>
+						
 							Propriétés : <ul>';
 
 							foreach($features as $key => $feature){
 								$html.='<li>'.$key.' : '.$feature.'</li>';
 							}
 $html.='           		</ul>
+						</p>
 					</div>
                 </div>
             </div>
