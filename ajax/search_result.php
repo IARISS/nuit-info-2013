@@ -15,15 +15,18 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 	// Définition de l'URL et autres options appropriées
 	curl_setopt($ch, CURLOPT_URL, "http://www.google.fr/images?hl=fr&q=shakira");
 	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	 
 	// Récupération de l'URL et passage au navigateur
 	$ret=curl_exec($ch);
 	// Fermeture de la ressource cURL et libération des ressources systèmes
 	curl_close($ch);
 	 
-	preg_match("#http:[^:]+\.jpg#",$ret,$res);//on match une url d'image
-	if(empty($res)) $res = 'vide';
+	if( preg_match("`http:[^:]+\.jpg`sUi",$ret,$res) )//on match une url d'image
+	{
+		if(empty($res)) $res = 'vide ' . print_r($res, true);
+	}
+	//
 
 	$search=$_POST['search'];
 	$cat_id=$_POST['cat_id'];
@@ -77,7 +80,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
             <div class="well">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="'.$res[0].'" alt="" class="img-rounded img-responsive" />
+                        <img src="'.var_dump($res).'" alt="" class="img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>'.$name.'</h4>
