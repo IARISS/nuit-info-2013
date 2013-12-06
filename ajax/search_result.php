@@ -54,7 +54,7 @@ if(isset($_POST['search']) && isset($_POST['cat_id']))
 		
 		if(isset($product->features))
 			$features=$product->features;
-		else $features = array('aucune catégorie' => '...' );
+		else $features = array('aucune propriété' => '...' );
 
 		$html.='<div class="row">
         <div class="col-md-10 col-md-offset-1">
